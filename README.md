@@ -16,6 +16,40 @@ pair per family at each of three agreement checkpoints: the innermost verb
 | [Noun lexicon](data/lexicons/lexicon_nouns.csv) | 20 nouns and their singular and plural forms |
 | [Transitive verb lexicon](data/lexicons/lexicon_verbs_transitive.csv) | 15 verbs and their present-tense agreement forms |
 
+## Center embedding and agreement
+
+A clause is **center-embedded** when it interrupts another clause. In this
+grammatical sentence from family `ce2fam_01239`, the relative clause modifying
+*the judges* contains a second relative clause modifying *the manager*. Both
+embedded clauses come before the main predicate *are late*.
+
+> The judges₁ [the manager₂ [the journalists₃ follow₃] blames₂] are₁ late.
+
+Brackets mark the two embedded clauses. Subscripts link each subject noun
+phrase to its verb. For example, *the journalists* (NP₃) is the subject of
+*follow* (V₃).
+
+Each row below is one minimal pair. Within a row, only the verb form at the
+tested checkpoint changes. The prefix is shared, and all other verb forms stay
+fixed.
+
+| Checkpoint | Grammatical subject | Shared prefix | Grammatical continuation | Agreement-error continuation |
+| --- | --- | --- | --- | --- |
+| V₃ (innermost verb) | NP₃ (*the journalists*, plural) | `The judges the manager the journalists` | `follow blames are late.` | `follows blames are late.` |
+| V₂ (intermediate verb) | NP₂ (*the manager*, singular) | `The judges the manager the journalists follow` | `blames are late.` | `blame are late.` |
+| COPULA (main-clause *is/are*) | NP₁ (*the judges*, plural) | `The judges the manager the journalists follow blames` | `are late.` | `is late.` |
+
+### Terms
+
+- **Controller** — the grammatical subject whose singular or plural number
+  determines the verb form.
+- **Attractor** — a noun phrase other than the controller whose number can
+  influence the model’s verb choice. At V₂, the nearest noun phrase is NP₃.
+- **Congruent** — the specified attractor and controller match in number.
+- **Incongruent** — the specified attractor and controller differ in number.
+  At V₂ in this family, plural NP₃ (*the journalists*) is incongruent with
+  singular NP₂ (*the manager*). The correct form is *blames*.
+
 ## Using the benchmark
 
 For each JSONL record, concatenate the common `prefix` with `good` to recover
