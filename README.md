@@ -1,6 +1,9 @@
 # ce-agree
 CE-Agree tests whether language models choose the verb form that agrees with its grammatical subject when nearby nouns give conflicting number cues. It includes 2,000 families of minimal pairs from doubly center-embedded English sentences, plus the lexicons used to generate them.
 
+# Tagged Release
+CE-Agree v1.0.0 contains the original CE2 dataset v0.7_nf2000, with 2,000 sentence families and 6,000 minimal pairs. 11_22_2026.
+
 ## Dataset
 
 The benchmark contains 6,000 minimal pairs in 2,000 sentence families, with one
