@@ -1,0 +1,16 @@
+verb_id,lemma,pres_sg,pres_pl
+v001,attack,attacks,attack
+v002,admire,admires,admire
+v003,criticize,criticizes,criticize
+v004,praise,praises,praise
+v005,blame,blames,blame
+v006,question,questions,question
+v007,invite,invites,invite
+v008,insult,insults,insult
+v009,consult,consults,consult
+v010,accuse,accuses,accuse
+v011,interrupt,interrupts,interrupt
+v012,follow,follows,follow
+v013,protect,protects,protect
+v014,support,supports,support
+v015,ignore,ignores,ignore
